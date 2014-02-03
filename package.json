@@ -1,0 +1,33 @@
+{
+  "name": "ribcage-day-picker",
+  "version": "0.1.0",
+  "description": "A simple day picker for ribcage-ui",
+  "main": "day-picker.js",
+  "dependencies": {
+    "ribcage-view": "~0.0.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ben-ng/ribcage-day-picker.git"
+  },
+  "keywords": [
+    "ribcage-view",
+    "ribcage-ui",
+    "day",
+    "date",
+    "picker",
+    "backbone"
+  ],
+  "browserify": {
+    "transform": "hbsfy"
+  },
+  "style": "style.css",
+  "author": "Ben Ng <me@benng.me> (http://benng.me)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
