@@ -17,14 +17,18 @@ DayPicker = ribcage.extend({
         (this.currentTime.getFullYear() + '').substring(2, 4)
     };
   }
-, previousDay: function () {
+, previousDay: function (e) {
+    e.preventDefault();
+
     this.currentTime.setTime(this.getPreviousDay());
     this.$('.date').text(this.context().date);
     this.handleRightArrow();
 
     this.trigger('change', this.currentTime.getTime());
   }
-, nextDay: function () {
+, nextDay: function (e) {
+    e.preventDefault();
+
     this.currentTime.setTime(this.getNextDay());
     this.$('.date').text(this.context().date);
     this.handleRightArrow();
