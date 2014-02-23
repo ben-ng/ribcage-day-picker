@@ -9,6 +9,7 @@ DayPicker = ribcage.extend({
     'click .leftArrow': 'previousDay'
   , 'click .rightArrow': 'nextDay'
   }
+, className: 'ribcage-day-picker'
 , template: require('./template.hbs')
 , context: function () {
     return {

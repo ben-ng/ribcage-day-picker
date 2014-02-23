@@ -1,0 +1,18 @@
+.ribcage-day-picker {
+  display: flex;
+  width: 100%;
+}
+
+.ribcage-day-picker .leftArrow {
+  flex: 1;
+  text-align: left;
+}
+
+.ribcage-day-picker .date {
+  width: 60px;
+}
+
+.ribcage-day-picker .rightArrow {
+  flex: 1;
+  text-align: right;
+}
