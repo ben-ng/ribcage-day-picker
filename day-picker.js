@@ -7,6 +7,7 @@ DayPicker = ribcage.extend({
   }
 , events: {
     'click .leftArrow': 'previousDay'
+  , 'click .date': 'today'
   , 'click .rightArrow': 'nextDay'
   }
 , className: 'ribcage-day-picker'
@@ -22,6 +23,15 @@ DayPicker = ribcage.extend({
     e.preventDefault();
 
     this.currentTime.setTime(this.getPreviousDay());
+    this.$('.date').text(this.context().date);
+    this.handleRightArrow();
+
+    this.trigger('change', this.currentTime.getTime());
+  }
+, today: function (e) {
+    e.preventDefault();
+
+    this.currentTime.setTime(this.getToday());
     this.$('.date').text(this.context().date);
     this.handleRightArrow();
 
