@@ -20,11 +20,11 @@
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  text-align: left;
+  text-align: right;
 }
 
 .ribcage-day-picker .date {
-  width: 60px;
+  width: 80px;
 }
 
 .ribcage-day-picker .rightArrow {
@@ -32,5 +32,45 @@
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  text-align: right;
+  text-align: left;
+}
+
+.leftArrow i,
+.rightArrow i {
+    display:inline-block;
+    width: .5em;
+    height: .7em;
+    position: relative;
+    margin-top: 24px;
+}
+.leftArrow i:before,
+.leftArrow i:after,
+.rightArrow i:before,
+.rightArrow i:after {
+    display:block;
+    content:"";
+    width:0;
+    height:0em;
+    border-style:solid;
+    position:absolute;
+}
+.leftArrow i:before {
+    left:0;
+    border-width:.4em .4em .4em 0;
+    border-color:transparent #0078e7 transparent transparent;
+}
+.leftArrow i:after {
+    right:0;
+    border-width:.4em .4em .4em 0;
+    border-color:transparent #f6f6f8 transparent transparent;
+}
+.rightArrow i:before {
+    right:0;
+    border-width:.4em 0 .4em .4em;
+    border-color:transparent transparent transparent #0078e7;
+}
+.rightArrow i:after {
+    left:0;
+    border-width:.4em 0 .4em .4em;
+    border-color:transparent transparent transparent #f6f6f8;
 }
