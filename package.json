@@ -1,6 +1,6 @@
 {
   "name": "ribcage-day-picker",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A simple day picker for ribcage-ui",
   "main": "day-picker.js",
   "dependencies": {
