@@ -13,10 +13,35 @@ DayPicker = ribcage.extend({
 , className: 'ribcage-day-picker'
 , template: require('./template.hbs')
 , context: function () {
+    var days = [
+          'Sun'
+        , 'Mon'
+        , 'Tue'
+        , 'Wed'
+        , 'Thu'
+        , 'Fri'
+        , 'Sat'
+        ]
+      , months = [
+          'Jan'
+        , 'Feb'
+        , 'Mar'
+        , 'Apr'
+        , 'May'
+        , 'Jun'
+        , 'Jul'
+        , 'Aug'
+        , 'Sep'
+        , 'Oct'
+        , 'Nov'
+        , 'Dec'
+        ]
+      , shortDate = days[this.currentTime.getDay()] + ', ' +
+          months[this.currentTime.getMonth()] + ' ' +
+          this.currentTime.getDate();
+
     return {
-      date: (this.currentTime.getMonth() + 1) + '/' +
-        this.currentTime.getDate() + '/' +
-        (this.currentTime.getFullYear() + '').substring(2, 4)
+      date: this.isToday() ? 'Today' : shortDate
     };
   }
 , previousDay: function (e) {
@@ -50,10 +75,13 @@ DayPicker = ribcage.extend({
     this.handleRightArrow();
   }
 , handleRightArrow: function () {
-    if(this.getNextDay() > this.getToday())
+    if(this.isToday())
       this.$('.rightArrow').css({visibility: 'hidden'});
     else
       this.$('.rightArrow').css({visibility: 'visible'});
+  }
+, isToday: function () {
+    return this.getNextDay() > this.getToday();
   }
 , getToday: function () {
     var now = new Date();
