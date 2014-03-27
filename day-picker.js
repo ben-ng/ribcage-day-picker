@@ -45,7 +45,9 @@ DayPicker = ribcage.extend({
     };
   }
 , previousDay: function (e) {
-    e.preventDefault();
+    if(e) {
+      e.preventDefault();
+    }
 
     this.currentTime.setTime(this.getPreviousDay());
     this.$('.date').text(this.context().date);
@@ -54,7 +56,9 @@ DayPicker = ribcage.extend({
     this.trigger('change', this.currentTime.getTime());
   }
 , today: function (e) {
-    e.preventDefault();
+    if(e) {
+      e.preventDefault();
+    }
 
     this.currentTime.setTime(this.getToday());
     this.$('.date').text(this.context().date);
@@ -63,7 +67,9 @@ DayPicker = ribcage.extend({
     this.trigger('change', this.currentTime.getTime());
   }
 , nextDay: function (e) {
-    e.preventDefault();
+    if(e) {
+      e.preventDefault();
+    }
 
     this.currentTime.setTime(this.getNextDay());
     this.$('.date').text(this.context().date);
