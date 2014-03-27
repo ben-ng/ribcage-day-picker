@@ -17,6 +17,14 @@ var Picker = require('ribcage-day-picker')
 picker = new Picker();
 ```
 
+### API
+
+```
+picker.previousDay();
+picker.today();
+picker.nextDay();
+```
+
 ### Listening for changes
 ```js
 picker.on('change', function (selection) {
