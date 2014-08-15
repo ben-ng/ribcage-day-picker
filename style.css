@@ -1,4 +1,62 @@
-.ribcage-day-picker {
+.ribcage-day-picker{
+    overflow: hidden;
+}
+
+.ribcage-day-picker .datepicker-arrow{
+    cursor: pointer;
+    padding: 10px;
+}
+.ribcage-day-picker .leftArrow{
+    float: left;
+}
+.ribcage-day-picker .rightArrow{
+    float: right;
+}
+.ribcage-day-picker .datepicker-arrow span{
+    display: block;
+    width: 10px;
+    height: 14px;
+    background: url('img/app/daypicker-arrows.png') no-repeat scroll 0 0;
+}
+.ribcage-day-picker .leftArrow span{
+    background-position: 0 0;
+}
+.ribcage-day-picker .rightArrow span{
+    background-position: 0 -34px;
+}
+
+.ribcage-day-picker .date{
+    margin: 10px 30px;
+    padding: 0;
+    color: #6b6b6b;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+}
+
+/*--- Retina Media Query ---*/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (   -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (           min-resolution: 192dpi),
+only screen and (            min-resolution: 2dppx){
+
+    .ribcage-day-picker .datepicker-arrow span{
+        background: url('img/app/daypicker-arrows@2x.png') no-repeat scroll 0 0;
+        background-size: 9px 48px;
+    }
+    .ribcage-day-picker .leftArrow span{
+        background-position: 0 0;
+    }
+    .ribcage-day-picker .rightArrow span{
+        background-position: 0 -34px;
+    }
+}
+
+
+/*.ribcage-day-picker {
   display: -ms-flexbox;
   -ms-box-orient: horizontal;
 
@@ -73,4 +131,4 @@
     left:0;
     border-width:.4em 0 .4em .4em;
     border-color:transparent transparent transparent #f6f6f8;
-}
+}*/
